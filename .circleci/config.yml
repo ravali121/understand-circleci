@@ -17,6 +17,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello"
+
   print_world:
     requires:
       - print_hello
@@ -37,4 +38,5 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
+      - print_hello
+      - print_world
